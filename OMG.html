@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Quieres ser mi novia?</title>
   <style>
     body {
@@ -56,6 +57,28 @@
       color: black;
       position: absolute;
     }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+      .buttons {
+        height: auto;
+      }
+      button {
+        font-size: 1em;
+        padding: 8px 16px;
+        margin: 8px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -86,8 +109,10 @@
       const distance = Math.hypot(mouseX - btnX, mouseY - btnY);
 
       if (distance < 100) {
-        const newX = Math.random() * (window.innerWidth - btnRect.width);
-        const newY = Math.random() * (window.innerHeight - btnRect.height);
+        const maxX = window.innerWidth - btnRect.width;
+        const maxY = window.innerHeight - btnRect.height;
+        const newX = Math.min(Math.max(0, Math.random() * maxX), maxX);
+        const newY = Math.min(Math.max(0, Math.random() * maxY), maxY);
         noBtn.style.left = `${newX}px`;
         noBtn.style.top = `${newY}px`;
       }
