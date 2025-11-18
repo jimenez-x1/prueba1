@@ -5,42 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Quieres ser mi novia?</title>
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
       background-color: #ffe6f0;
       font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 50px;
       overflow: hidden;
     }
+
+    .container {
+      max-width: 700px;
+      padding: 20px;
+    }
+
     h1 {
       color: #d6336c;
-      font-size: 2.5em;
-      margin-top: 40px;
+      font-size: 2.2em;
+      margin: 20px 0;
     }
+
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #333;
-      max-width: 700px;
-      margin: 0 auto 30px;
       white-space: pre-line;
+      margin-bottom: 30px;
     }
+
     .hearts {
       font-size: 2em;
       color: #ff3366;
       animation: float 2s infinite ease-in-out;
     }
+
     @keyframes float {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
     }
+
     .buttons {
-      margin-top: 40px;
       position: relative;
       height: 100px;
     }
+
     button {
-      font-size: 1.2em;
+      font-size: 1.1em;
       padding: 10px 20px;
       margin: 10px;
       border: none;
@@ -48,53 +64,48 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
+
     #yesBtn {
       background-color: #ff66a3;
       color: white;
     }
+
     #noBtn {
       background-color: #cccccc;
       color: black;
       position: absolute;
     }
 
-    /* Responsive styles */
     @media (max-width: 600px) {
-      body {
-        padding: 20px;
-      }
       h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
       }
       p {
         font-size: 1em;
-        margin-bottom: 20px;
-      }
-      .buttons {
-        height: auto;
       }
       button {
         font-size: 1em;
         padding: 8px 16px;
-        margin: 8px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="hearts">❤️ 💖 💘 💕 💞</div>
-  <p>
-    Después de todo lo que hemos vivido hasta ahora —las risas que se nos escapan sin querer, los momentos de felicidad, las ocurrencias de ambos... y a pesar de los momentos no tan agradables, limitaciones que nos tocan, por circunstancias que no elegimos— hay algo que me queda claro:
+  <div class="container">
+    <div class="hearts">❤️ 💖 💘 💕 💞</div>
+    <p>
+      Después de todo lo que hemos vivido hasta ahora —las risas que se nos escapan sin querer, los momentos de felicidad, las ocurrencias de ambos... y a pesar de los momentos no tan agradables, limitaciones que nos tocan, por circunstancias que no elegimos— hay algo que me queda claro:
 
-    No tengo más motivos para darte que este miedo que me da imaginarme no estar contigo.
-    Porque sabes que te quiero, eso y mucho más.
+      No tengo más motivos para darte que este miedo que me da imaginarme no estar contigo.
+      Porque sabes que te quiero, eso y mucho más.
 
-    Por eso hoy, de manera no convencional quiero pedirte:
-  </p>
-  <h1>¿Me permites estar a tu lado? ¿Quieres ser mi novia?</h1>
-  <div class="buttons">
-    <button id="yesBtn">¡Sí, quiero!</button>
-    <button id="noBtn">No 😢</button>
+      Por eso hoy, de manera no convencional quiero pedirte:
+    </p>
+    <h1>¿Me permites estar a tu lado? ¿Quieres ser mi novia?</h1>
+    <div class="buttons">
+      <button id="yesBtn">¡Sí, quiero!</button>
+      <button id="noBtn">No 😢</button>
+    </div>
   </div>
 
   <script>
